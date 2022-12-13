@@ -215,7 +215,7 @@ class StaffCreate(ModelMutation):
         error_type_field = "staff_errors"
 
     @classmethod
-    def check_permissions(cls, context, permissions=None):
+    def check_permissions(cls, context, permissions=None, **data):
         app = load_app(context)
         if app:
             raise PermissionDenied(
